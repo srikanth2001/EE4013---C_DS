@@ -144,44 +144,29 @@ https://github.com/srikanth2001/EE4013---C_DS/blob/main/Assingnment-01/assignmen
 \begin{lstlisting}
 #include <stdio.h>
 int main(){
-    int a[4][5] = { {1,2,3,4,5},
-                    {6,7,8,9,10},
-                    {11,12,13,14,15},
-                    {16,17,18,19,20}};
+    int a[4][5] = {{1,2,3,4,5},
+                 {6,7,8,9,10},
+                 {11,12,13,14,15},
+                 {16,17,18,19,20}};
     printf("%d", *(*(a+**a+2) +3));
     return(0);
 }
 \end{lstlisting}
-Which of the following will happen when the function \textbf{convert} is called with any positive integer n as argument?
-\begin{enumerate}
-    \item It will print the binary representation of \textbf{n} and terminate.
-    \item It will print the binary representation of \textbf{n} in the reverse order and terminate.
-    \item It will print the binary representation of \textbf{n} and will not terminate.
-    \item It will not print anything and will not terminate.
-\end{enumerate}
+The output of the program is?
 
 \section{Solution}
-Answer : D) It will not print anything and will not terminate.
+Answer : The output of the program is 19
 \newline
 \textbf{Explanation}
 \newline
-This is a problem involving recursion, as $n>0$ the portion 
-
-\begin{lstlisting}
-    else{
-        convert(n/2);
-        printf("%d", n%2);
-    }
-\end{lstlisting}
-will be evaluated. In this portion, convert is called again with value of \textbf{n/2} and subsequently \textbf{n} goes from $n -> 0$.
-\newline
-\newline
-\newline
-\newline
-However as \textbf{n} = 0; the condition 
-\newline
-\begin{lstlisting}
-    if(n<0) printf("%d", n);
-\end{lstlisting}
-is still not satisfied and $0/2 = 0$. Hence it will not terminate and will not print anything as print statement is after \textbf{convert(n/2)} call.
+'in printing this value 
+\begin{equation}
+    *(*(a+**a+2) +3)) 
+\end{equation}
+**a  = 1 then , 
+\begin{equation}
+    *(*(a+1+2) +3)) 
+\end{equation}
+in above equation (*(a+3) +3) this represents the Address of 3 column of 3 row. 
+ Hence the Output is 19
 \end{document}
