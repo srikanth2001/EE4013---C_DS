@@ -123,26 +123,33 @@ columns=fullflexible
      \def\midbox#1{\raisebox{-0.5\baselineskip}[0in][0in]{#1}}
 \vspace{3cm}
 \title{Assignment 1}
-\author{Piyush Kumar Uttam - EE18BTECH11036}
+\author{Kamparaju Srikanth - EE18BTECH11023}
 \maketitle
 \newpage
 \bigskip
 \renewcommand{\thefigure}{\theenumi}
 \renewcommand{\thetable}{\theenumi}
+Download all Codes from 
+%
+\begin{lstlisting}
+https://github.com/srikanth2001/EE4013---C_DS/blob/main/Assingnment-01/codes/CS20_Q22.C
+\end{lstlisting}
 Download all latex-tikz codes from 
 %
 \begin{lstlisting}
-https://github.com/piyushSTK/C-DS/blob/main/Assignment1/assignment1.tex
+https://github.com/srikanth2001/EE4013---C_DS/blob/main/Assingnment-01/assignment1.tex
 \end{lstlisting}
 \section{Problem}
-(Q 26) Consider the following C function.
+(Q 22) Consider the following C fProgram.
 \begin{lstlisting}
-void convert(int n){
-    if(n<0) printf("%d", n);
-    else{
-        convert(n/2);
-        printf("%d", n%2);
-    }
+#include <stdio.h>
+int main(){
+    int a[4][5] = { {1,2,3,4,5},
+                    {6,7,8,9,10},
+                    {11,12,13,14,15},
+                    {16,17,18,19,20}};
+    printf("%d", *(*(a+**a+2) +3));
+    return(0);
 }
 \end{lstlisting}
 Which of the following will happen when the function \textbf{convert} is called with any positive integer n as argument?
