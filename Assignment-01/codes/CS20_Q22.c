@@ -8,7 +8,6 @@ int main(){
 
     for(i = 0; i < 4; i++)
     {
-        printf("Address of %d th array %u \n",i , *(a + i));
         for(j = 0; j < 5; j++)
         {
              printf("a[%d][%d]=%d\n", i, j, *( *(a + i) + j) );
