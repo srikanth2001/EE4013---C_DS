@@ -161,12 +161,18 @@ Answer : The output of the program is-19
 \newline
 Let consider that input \textbf{a} is a 2D matrix 
 \begin{align*}
- a =   \begin{bmatrix}
+\begin{bmatrix}
+a_{[0][[0]}&a_{[0][[1]}&a_{[0][[2]}&a_{[0][[3]}&a_{[0][[4]}\\
+a_{[1][[0]}&a_{[1][[1]}&a_{[1][[2]}&a_{[1][[3]}&a_{[1][[4]}\\
+a_{[2][[0]}&a_{[2][[1]}&a_{[2][[2]}&a_{[2][[3]}&a_{[2][[4]}\\
+a_{[3][[0]}&a_{[3][[1]}&a_{[3][[2]}&a_{[3][[3]}&a_{[3][[4]}
+\end{bmatrix} = 
+\begin{bmatrix}
 1&2&3&4&5\\
 6&7&8&9&10\\
 11&12&13&14&15\\
 16&17&18&19&20
-\end{bmatrix}  
+\end{bmatrix}
 \end{align*}
 
 From the above matrix **a represents the index of the element in $a_{[0][0]}$ element i.e 1, 
@@ -183,16 +189,8 @@ int main(){
                     {6,7,8,9,10},
                     {11,12,13,14,15},
                     {16,17,18,19,20}};
-    int i, j;
-    for(i = 0; i < 4; i++)
-    {
-        for(j = 0; j < 5; j++)
-        {
-             printf("a[%d][%d]=%d\n", i, j, *( *(a + i) + j) );
-        }
-        printf("\n\n");
-    }
-    printf("final output is a[%d][%d]=%d\n", **a+2,3,*(*(a+**a+2) +3));
+
+    printf("%d", a[3][3]);
     return(0);
 }
 \end{lstlisting}
